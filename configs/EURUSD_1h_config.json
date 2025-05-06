@@ -1,0 +1,31 @@
+{
+  "pair": "GBPUSD",
+  "timeframe": "1h",
+  "session_defs": [
+    {
+      "name": "A",
+      "start": "00:00",
+      "end": "08:00",
+      "color": "#ff6384"
+    },
+    {
+      "name": "B",
+      "start": "08:00",
+      "end": "16:00",
+      "color": "#36a2eb"
+    },
+    {
+      "name": "C",
+      "start": "16:00",
+      "end": "00:00",
+      "color": "#4bc0c0"
+    }
+  ],
+  "bucket_size_pips": 50,
+  "value_area_pct": 0.7,
+  "balanced_poc_center": 0.25,
+  "balanced_time_inside": 0.7,
+  "entry_bars": 2,
+  "risk_per_trade": 5.0,
+  "saved_date": "2025-05-06 17:52:40"
+}
