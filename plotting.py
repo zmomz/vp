@@ -163,9 +163,20 @@ def display_stats_dashboard(stats, data_df, session_defs, bt=None):
     """Clean, readable performance stats dashboard"""
     st.subheader("📊 Strategy Performance Summary")
 
-
     # Organize metrics in categories
     summary = {
+                "Parameters": {
+            "Pair": st.session_state.get("pair", "N/A"),
+            "Timeframe": st.session_state.get("timeframe", "N/A"),
+            "Start Date": st.session_state.get("start_date", "N/A"),
+            "End Date": st.session_state.get("end_date", "N/A"),
+            "Bucket Size (pips)": st.session_state.get("bucket_size_pips", "N/A"),
+            "Value Area %": st.session_state.get("value_area_pct", "N/A"),
+            "Balanced POC Center": st.session_state.get("balanced_poc_center", "N/A"),
+            "Balanced Time Inside": st.session_state.get("balanced_time_inside", "N/A"),
+            "Entry Bars": st.session_state.get("entry_bars", "N/A"),
+            "Risk per Trade": st.session_state.get("risk_per_trade", "N/A"),
+        },
         "General": {
             "Start": stats['Start'],
             "End": stats['End'],
@@ -203,7 +214,7 @@ def display_stats_dashboard(stats, data_df, session_defs, bt=None):
             "Expectancy [%]": stats['Expectancy [%]'],
             "SQN": stats['SQN'],
             "Kelly Criterion": stats['Kelly Criterion'],
-        }
+        },
     }
 
     # Render each section in its own expandable block
